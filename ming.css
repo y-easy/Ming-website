@@ -1,0 +1,70 @@
+/* ming.css */
+body{
+background-color: #F0F8FF;
+text-align: center;
+font-family: Arial, sans-serif;
+margin:0
+}
+img {
+    max-width: 45%;
+    height: auto;
+    display: block;
+    margin: auto;
+	margin-top: 175px;
+}
+
+nav h1 {
+    margin: 0;
+	z-index: 2; /* Set a higher z-index to place the h1 on top */
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly; /* or use 'space-between' for spacing at the ends */
+    background-color: #6495ED; /* Optional: add a background color for better visibility */
+    padding: 50px;
+	color: white;
+	position: fixed;
+    width: 100%;
+    top: 0; /* Adjust the top position based on the height of your header */
+    z-index: 1;
+	align-items: center;
+}
+
+nav a {color: white; /* Optional: styling for link text color */
+text-decoration: none; /* Optional: remove default link underline */
+padding: 5px 10px; /* Optional: add padding for better spacing */}
+
+section {
+    margin-top: 50px; /* Adjust this margin to make content visible below the fixed header and navigation */
+	text-align: justify;
+	line-height: 2;
+	padding: 0 50px;
+}
+
+aside {
+    background-color: #6495ED;
+    color: white;
+    padding: 10px;
+	margin-top: 50px;
+}
+
+footer {
+    background-color: #6495ED;
+    color: white;
+    padding: 10px;
+	font-size: 9px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start of the column */
+        padding: 10px 20px; /* Adjust padding for better spacing */
+    }
+
+    nav a {
+        margin-bottom: 5px; /* Add margin between links in the column layout */
+    }
+}
