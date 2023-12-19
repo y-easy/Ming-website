@@ -15,25 +15,69 @@ img {
 
 nav h1 {
     margin: 0;
-	z-index: 2; /* Set a higher z-index to place the h1 on top */
+	/*z-index: 2; */
 }
 
 nav {
     display: flex;
     justify-content: space-evenly; /* or use 'space-between' for spacing at the ends */
     background-color: #6495ED; /* Optional: add a background color for better visibility */
-    padding: 50px;
+    padding: 10px;
 	color: white;
 	position: fixed;
-    width: 100%;
+    width: calc(100% - 20px);
     top: 0; /* Adjust the top position based on the height of your header */
-    z-index: 1;
+   /* z-index: 1;*/
 	align-items: center;
+	font-size: 20px;
 }
 
+	
 nav a {color: white; /* Optional: styling for link text color */
 text-decoration: none; /* Optional: remove default link underline */
-padding: 5px 10px; /* Optional: add padding for better spacing */}
+padding: 5px 10px; /* Optional: add padding for better spacing */
+flex-wrap: wrap;
+font-size: 1em;
+}
+
+nav button {
+    padding: 8px 16px;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+	font-size: 1em;
+}
+
+nav button:hover {
+    background-color: #191970;
+}
+
+@media screen and (max-width: 768px) {
+	nav {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start of the column */
+    }
+	
+    nav a {
+        font-size: 0.8em; /* Adjust font size for smaller screens */
+		margin-bottom: 5px;
+    }
+	
+	nav button {
+		font-size: 0.8em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+    nav a {
+        font-size: 0.7em; /* Further adjust font size for even smaller screens */
+    }
+	nav button {
+		font-size: 0.8em;
+	}
+}
 
 section {
     margin-top: 50px; /* Adjust this margin to make content visible below the fixed header and navigation */
@@ -49,6 +93,19 @@ aside {
 	margin-top: 50px;
 }
 
+aside button {
+    padding: 8px 16px;
+    background-color: #4682B4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+aside button:hover {
+    background-color: #191970;
+}
+
 footer {
     background-color: #6495ED;
     color: white;
@@ -56,15 +113,4 @@ footer {
 	font-size: 9px;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: flex-start; /* Align items to the start of the column */
-        padding: 10px 20px; /* Adjust padding for better spacing */
-    }
 
-    nav a {
-        margin-bottom: 5px; /* Add margin between links in the column layout */
-    }
-}
