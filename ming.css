@@ -1,10 +1,16 @@
 /* ming.css */
-body{
+html {
+	scroll-padding-top: 15%;
+}
+
+body {
 background-color: #F0F8FF;
 text-align: center;
-font-family: Arial, sans-serif;
-margin:0
+font-family: "Helvetica", sans-serif;
+margin:0;
+color: #191970;
 }
+
 img {
     max-width: 45%;
     height: auto;
@@ -62,7 +68,7 @@ nav button:hover {
 	
     nav a {
         font-size: 0.8em; /* Adjust font size for smaller screens */
-		margin-bottom: 5px;
+		/* margin-bottom: 5px; */
     }
 	
 	nav button {
@@ -80,11 +86,20 @@ nav button:hover {
 }
 
 section {
-    margin-top: 50px; /* Adjust this margin to make content visible below the fixed header and navigation */
+    margin-top: 5%; /* Adjust this margin to make content visible below the fixed header and navigation */
 	text-align: justify;
 	line-height: 2;
-	padding: 0 50px;
+	padding: 0px 50px;
 }
+
+p {
+	font-weight: 500;
+}
+
+ul {
+font-weight: 600;
+}
+
 
 aside {
     background-color: #6495ED;
