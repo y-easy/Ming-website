@@ -9,6 +9,7 @@ text-align: center;
 font-family: "Helvetica", sans-serif;
 margin:0;
 color: #191970;
+font-size: 20px;
 }
 
 img {
@@ -30,7 +31,8 @@ nav {
     background-color: #6495ED; /* Optional: add a background color for better visibility */
     padding: 10px;
 	color: white;
-	position: fixed;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
     width: calc(100% - 20px);
     top: 0; /* Adjust the top position based on the height of your header */
    /* z-index: 1;*/
@@ -44,6 +46,10 @@ text-decoration: none; /* Optional: remove default link underline */
 padding: 5px 10px; /* Optional: add padding for better spacing */
 flex-wrap: wrap;
 font-size: 1em;
+}
+
+nav a:hover {
+	background-color: #191970;
 }
 
 nav button {
@@ -60,29 +66,41 @@ nav button:hover {
     background-color: #191970;
 }
 
-@media screen and (max-width: 768px) {
-	nav {
-        flex-direction: column; /* Stack items vertically on small screens */
-        align-items: flex-start; /* Align items to the start of the column */
-    }
-	
-    nav a {
-        font-size: 0.8em; /* Adjust font size for smaller screens */
-		/* margin-bottom: 5px; */
-    }
-	
-	nav button {
-		font-size: 0.8em;
-	}
+input[type=checkbox] {
+  display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
 }
 
-@media screen and (max-width: 480px) {
-    nav a {
-        font-size: 0.7em; /* Further adjust font size for even smaller screens */
-    }
-	nav button {
-		font-size: 0.8em;
-	}
+@media (max-width: 768px) {
+ nav {
+    display:none;
+    position: absolute;
+    background-color:teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  nav a:hover {
+    display: inline-block;
+    background-color:#4c9e9e;
+    transition: 0.3s ease;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 section {
@@ -93,11 +111,16 @@ section {
 }
 
 p {
-	font-weight: 500;
+	font-weight: 600;
+	font-size: 1em;
+}
+
+h2 {
+	font-size: 2em;
 }
 
 ul {
-font-weight: 600;
+font-weight: 700;
 }
 
 
@@ -127,5 +150,6 @@ footer {
     padding: 10px;
 	font-size: 9px;
 }
+
 
 
